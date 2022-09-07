@@ -2,9 +2,8 @@
 using CardApp.Server.Dal.Interfaces;
 using CardApp.Server.Dal.Models;
 using JsonFlatFileDataStore;
-using TransactionException = System.Transactions.TransactionException;
 
-namespace CardApp.Server.Dal.Domain;
+namespace CardApp.Server.Dal.Services;
 
 public class DefaultCardInfoRepository : ICardInfoRepository
 {

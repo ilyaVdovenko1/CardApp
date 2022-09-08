@@ -14,11 +14,24 @@
         
         xmlns:local="clr-namespace:CardsApp.Client.Wpf"
         xmlns:views="clr-namespace:CardsApp.Client.Wpf.Views"
+        xmlns:custom="clr-namespace:ModalControl;assembly=ModalControl"
+        xmlns:viewModels="clr-namespace:CardsApp.Client.Wpf.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModels:AddCardViewModel}">
+            <views:AddCardView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:EditCardViewModel}">
+            <views:EditCardView/>
+        </DataTemplate>
+    </Window.Resources>
     
     <Grid>
-        <views:CardsAppView/>
+        <custom:Modal Panel.ZIndex="1" IsOpen="{Binding IsModalOpen}">
+            <ContentControl Margin="25" Content="{Binding CurrentModalViewModel}"></ContentControl>
+        </custom:Modal>
+        <views:CardsAppView DataContext="{Binding CardsViewModel}"/>
 
     </Grid>
 </Window>

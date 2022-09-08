@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using CardsApp.Client.Wpf.Stores;
 using CardsApp.Client.Wpf.ViewModels;
 
 namespace CardsApp.Client.Wpf
@@ -14,11 +9,24 @@ namespace CardsApp.Client.Wpf
     /// </summary>
     public partial class App : Application
     {
+        private readonly SelectedCardStore selectedCardStore;
+        
+        private readonly ModalNavigationStore modalNavigationStore;
+
+        private readonly CardsStore cardsStore;
+
+        public App()
+        {
+            this.cardsStore = new CardsStore();
+            this.selectedCardStore = new SelectedCardStore();
+            this.modalNavigationStore = new ModalNavigationStore();
+        }
+        
         protected override void OnStartup(StartupEventArgs eventArgs)
         {
             MainWindow = new MainWindow()
             {
-                DataContext = new CardsViewModel(),
+                DataContext = new MainViewModel(this.modalNavigationStore,new CardsViewModel(this.cardsStore ,this.selectedCardStore, this.modalNavigationStore)),
                 
             };
             MainWindow.Show();

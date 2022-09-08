@@ -13,7 +13,7 @@ public class OpenFileDialogViewModel : ViewModelBase
         set
         {
             _selectedPath = value;
-            OnPropertyChanged("SelectedPath");
+            OnPropertyChanged(nameof(SelectedPath));
         }
     }
 

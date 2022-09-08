@@ -1,4 +1,4 @@
-﻿using CardsApp.Client.Wpf.Models;
+﻿using CardsApp.Client.Domain.Models;
 using CardsApp.Client.Wpf.Stores;
 
 namespace CardsApp.Client.Wpf.ViewModels;

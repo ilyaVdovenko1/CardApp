@@ -1,5 +1,4 @@
-﻿using CardsApp.Client.Wpf.Models;
-using CardsApp.Client.Wpf.Stores;
+﻿using CardsApp.Client.Wpf.Stores;
 using CardsApp.Client.Wpf.ViewModels;
 
 namespace CardsApp.Client.Wpf.Commands;

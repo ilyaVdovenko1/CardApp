@@ -1,5 +1,5 @@
 ﻿using System;
-using CardsApp.Client.Wpf.Models;
+using CardsApp.Client.Domain.Models;
 
 namespace CardsApp.Client.Wpf.Stores;
 

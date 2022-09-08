@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 using CardsApp.Client.Wpf.Commands;
-using CardsApp.Client.Wpf.Models;
+using CardsApp.Client.Domain.Models;
 using CardsApp.Client.Wpf.Stores;
 
 namespace CardsApp.Client.Wpf.ViewModels;

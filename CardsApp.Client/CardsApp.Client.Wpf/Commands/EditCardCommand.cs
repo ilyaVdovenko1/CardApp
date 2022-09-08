@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using CardsApp.Client.Wpf.Models;
+using CardsApp.Client.Domain.Models;
 using CardsApp.Client.Wpf.Stores;
 using CardsApp.Client.Wpf.ViewModels;
 

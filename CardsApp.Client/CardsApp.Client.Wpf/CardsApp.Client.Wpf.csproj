@@ -17,4 +17,8 @@
       <Folder Include="Resources" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\CardsApp.Client.Domain\CardsApp.Client.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

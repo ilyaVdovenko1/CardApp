@@ -11,10 +11,12 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
+        
         xmlns:local="clr-namespace:CardsApp.Client.Wpf"
         xmlns:views="clr-namespace:CardsApp.Client.Wpf.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
+    
     <Grid>
         <views:CardsAppView/>
 

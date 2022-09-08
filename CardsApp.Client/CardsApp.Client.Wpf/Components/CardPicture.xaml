@@ -9,9 +9,9 @@
     <Grid>
         <Border BorderBrush="Gray" BorderThickness="0 1 1 1 " CornerRadius="0 0 5 5 "></Border>
         <Image
-            Source="Resources/Chartridge046_small.jpg"
-            Height="140"
-            Width="196"
-            Stretch="UniformToFill" />
+            Source="{Binding PictureUrl}"
+            Height="Auto"
+            Width="Auto"
+            Stretch="None" />
     </Grid>
 </UserControl>

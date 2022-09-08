@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using CardsApp.Client.Wpf.ViewModels;
 
 namespace CardsApp.Client.Wpf
 {
@@ -13,5 +14,16 @@ namespace CardsApp.Client.Wpf
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs eventArgs)
+        {
+            MainWindow = new MainWindow()
+            {
+                DataContext = new CardsViewModel(),
+                
+            };
+            MainWindow.Show();
+            
+            
+        }
     }
 }

@@ -32,10 +32,10 @@ public class CardsController : ControllerBase
         {
             return NotFound();
         }
-        // catch (Exception)
-        // {
-        //     return StatusCode(StatusCodes.Status500InternalServerError); 
-        // }
+        catch (Exception)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError); 
+        }
     }
     
     [HttpGet("{id:Guid}",Name = "GetCardById")]
@@ -51,10 +51,10 @@ public class CardsController : ControllerBase
         {
             return NotFound();
         }
-        // catch (Exception)
-        // {
-        //     return StatusCode(StatusCodes.Status500InternalServerError); 
-        // }
+        catch (Exception)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError); 
+        }
     }
     
     [HttpPost(Name = "CreateCard")]
@@ -70,10 +70,10 @@ public class CardsController : ControllerBase
         {
             return NotFound();
         }
-        // catch (Exception)
-        // {
-        //     return StatusCode(StatusCodes.Status500InternalServerError); 
-        // }
+        catch (Exception)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError); 
+        }
     }
     
     [HttpPut(Name = "UpdateCard")]
@@ -89,10 +89,10 @@ public class CardsController : ControllerBase
         {
             return NotFound();
         }
-        // catch (Exception)
-        // {
-        //     return StatusCode(StatusCodes.Status500InternalServerError); 
-        // }
+        catch (Exception)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError); 
+        }
         
     }
     

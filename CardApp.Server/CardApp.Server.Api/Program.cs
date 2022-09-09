@@ -2,12 +2,12 @@ using CardApp.Server.Bll.Domain;
 using CardApp.Server.Bll.Interfaces;
 using CardApp.Server.Dal.Interfaces;
 using CardApp.Server.Dal.Services;
-using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddSingleton<ICardInfoRepository>(new DefaultCardInfoRepository("data.json"));
+var dbPath = builder.Configuration["DbPath"] ?? "db.json";
+builder.Services.AddSingleton<ICardInfoRepository>(new DefaultCardInfoRepository(dbPath));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddSingleton<ICardInfoService>(new DefaultCardService(builder.Services.BuildServiceProvider().GetService<ICardInfoRepository>()));
 builder.Services.AddControllers();

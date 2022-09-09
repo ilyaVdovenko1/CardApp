@@ -26,7 +26,7 @@
             </Grid.ColumnDefinitions>
             <TextBox Grid.Row="0"
                      x:Name="PathTextBox"
-                     materialDesign:HintAssist.Hint="Picture path" Text="{Binding PictureUrl}">
+                     materialDesign:HintAssist.Hint="Picture path" Text="{Binding SelectedPath}">
             </TextBox>
             <Button Grid.Column="1"
                 ToolTip="Save"

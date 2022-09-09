@@ -9,7 +9,7 @@ public class CardsViewModel: ViewModelBase
     public CardsViewModel(CardsStore cardsStore, SelectedCardStore selectedCardStore,
         ModalNavigationStore modalNavigationStore)
     {
-        CardsListViewModel = new CardsListViewModel(cardsStore, selectedCardStore, modalNavigationStore);
+        CardsListViewModel = CardsListViewModel.LoadViewModel(cardsStore, selectedCardStore, modalNavigationStore);
         CardPictureViewModel = new CardPictureViewModel(selectedCardStore);
 
         AddCardCommand = new OpenAddCardCommand(cardsStore,modalNavigationStore);

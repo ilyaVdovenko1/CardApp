@@ -1,6 +1,11 @@
-﻿using System.Windows;
+﻿using System;
+using System.IO;
+using System.Windows;
+using CardsApp.Client.Domain.Services;
 using CardsApp.Client.Wpf.Stores;
 using CardsApp.Client.Wpf.ViewModels;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace CardsApp.Client.Wpf
 {
@@ -9,29 +14,47 @@ namespace CardsApp.Client.Wpf
     /// </summary>
     public partial class App : Application
     {
-        private readonly SelectedCardStore selectedCardStore;
+        private SelectedCardStore selectedCardStore;
         
-        private readonly ModalNavigationStore modalNavigationStore;
+        private ModalNavigationStore modalNavigationStore;
 
-        private readonly CardsStore cardsStore;
+        private CardsStore cardsStore;
+        
+        private ServiceProvider serviceProvider;
+        
+        public IConfiguration Configuration { get; private set; }
+        
 
         public App()
         {
-            this.cardsStore = new CardsStore();
-            this.selectedCardStore = new SelectedCardStore();
-            this.modalNavigationStore = new ModalNavigationStore();
+            ServiceCollection services = new ServiceCollection();
+            ConfigureServices(services);
+            serviceProvider = services.BuildServiceProvider();
+            
         }
         
-        protected override void OnStartup(StartupEventArgs eventArgs)
+        private void ConfigureServices(ServiceCollection services)
         {
-            MainWindow = new MainWindow()
+            var builder = new ConfigurationBuilder()
+                .AddJsonFile(@"appsettings.json", optional: false, reloadOnChange: true);
+ 
+            Configuration = builder.Build();
+            
+
+            this.cardsStore = new CardsStore(services.AddCardsAppService(Configuration));
+            this.selectedCardStore = new SelectedCardStore();
+            this.modalNavigationStore = new ModalNavigationStore();
+            
+            services.AddSingleton<MainWindow>(new MainWindow()
             {
                 DataContext = new MainViewModel(this.modalNavigationStore,new CardsViewModel(this.cardsStore ,this.selectedCardStore, this.modalNavigationStore)),
-                
-            };
-            MainWindow.Show();
-            
-            
+            });
+        }
+
+        private void OnStartup(object sender, StartupEventArgs e)
+        {
+            var mainWindow = serviceProvider.GetService<MainWindow>();
+            mainWindow.Show();
         }
     }
 }

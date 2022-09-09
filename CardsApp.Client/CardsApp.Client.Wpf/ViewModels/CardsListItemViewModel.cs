@@ -17,6 +17,8 @@ public class CardsListItemViewModel: ViewModelBase
     public CardsListItemViewModel(Card cardModel, CardsStore cardsStore, ModalNavigationStore modalNavigationStore)
     {
         this.EditCommand = new OpenEditCardCommand(this, cardsStore, modalNavigationStore);
+
+        this.DeleteCommand = new DeleteCardCommand(this, cardsStore);
         
         this.CardModel = cardModel;
     }

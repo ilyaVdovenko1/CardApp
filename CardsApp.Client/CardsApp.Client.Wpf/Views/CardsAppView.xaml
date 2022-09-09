@@ -28,8 +28,11 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <components:CardsList Grid.Column="0" DataContext="{Binding CardsListViewModel}"/>
-                    <components:CardPicture Grid.Column="1" DataContext="{Binding CardPictureViewModel}"/>
+                    
+                    
+                    
+                    <components:CardsList  Grid.Column="0" DataContext="{Binding CardsListViewModel}"/>
+                    <components:CardPicture  Grid.Column="1" DataContext="{Binding CardPictureViewModel}"/>
                 </Grid>
         </Grid>
     </Grid>

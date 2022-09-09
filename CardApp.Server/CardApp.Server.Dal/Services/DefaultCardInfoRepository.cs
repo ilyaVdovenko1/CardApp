@@ -45,7 +45,7 @@ public class DefaultCardInfoRepository : ICardInfoRepository
 
     public async Task UpdateCardAsync(Guid cardId, CardRepositoryModel newCard)
     {
-        var isUpdated  = await cardsCollection.UpdateOneAsync(x => x.Id == cardId, newCard);
+        var isUpdated  = await cardsCollection.ReplaceOneAsync(x => x.Id == cardId, newCard);
         if (!isUpdated)
         {
             if (!IfCardExists(newCard.Id))

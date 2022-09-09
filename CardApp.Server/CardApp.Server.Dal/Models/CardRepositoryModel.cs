@@ -1,14 +1,11 @@
-﻿namespace CardApp.Server.Dal.Models;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+
+namespace CardApp.Server.Dal.Models;
 
 public record CardRepositoryModel
 {
-    public CardRepositoryModel(string name, string imageUrl)
-    {
-        this.Id = Guid.NewGuid();
-        this.Name = name;
-        this.ImageUrl = imageUrl;
-    }
-
+    
     public CardRepositoryModel(Guid id, string name, string imageUrl)
     {
         this.Id = id;
@@ -16,9 +13,9 @@ public record CardRepositoryModel
         this.ImageUrl = imageUrl;
     }
 
-    public Guid Id { get; }
+    public Guid Id { get;  }
     
-    public string Name { get; }
+    public string Name { get;  }
     
-    public string ImageUrl { get; }
+    public string ImageUrl { get;  }
 }

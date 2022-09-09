@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardsApp.Client.Wpf", "CardsApp.Client.Wpf\CardsApp.Client.Wpf.csproj", "{3324A188-9F81-4A78-8145-744E33E74CEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardsApp.Client.Domain", "CardsApp.Client.Domain\CardsApp.Client.Domain.csproj", "{EE4A557A-9ABE-4793-A210-09B20D7EC672}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardsApp.Client.ApiConnection", "CardsApp.Client.ApiConnection\CardsApp.Client.ApiConnection.csproj", "{84B457A1-D354-49B6-945E-5C89BF9BF648}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3324A188-9F81-4A78-8145-744E33E74CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3324A188-9F81-4A78-8145-744E33E74CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3324A188-9F81-4A78-8145-744E33E74CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3324A188-9F81-4A78-8145-744E33E74CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE4A557A-9ABE-4793-A210-09B20D7EC672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4A557A-9ABE-4793-A210-09B20D7EC672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4A557A-9ABE-4793-A210-09B20D7EC672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4A557A-9ABE-4793-A210-09B20D7EC672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B457A1-D354-49B6-945E-5C89BF9BF648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B457A1-D354-49B6-945E-5C89BF9BF648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B457A1-D354-49B6-945E-5C89BF9BF648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B457A1-D354-49B6-945E-5C89BF9BF648}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

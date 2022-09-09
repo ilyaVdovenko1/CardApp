@@ -1,0 +1,29 @@
+{
+  "cardRepositoryModel": [
+    {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+      "name": "str",
+      "imageUrl": "string"
+    },
+    {
+      "id": "1f33a721-66e4-46f0-af55-50ab5a65626d",
+      "name": "12",
+      "imageUrl": "123"
+    },
+    {
+      "id": "e8bacee0-a2d2-4f1d-bb3e-5a13f25218f3",
+      "name": "zzz",
+      "imageUrl": "233"
+    },
+    {
+      "id": "59c1cfa1-55db-4afa-b938-3ab6e4d203e0",
+      "name": "фаыа",
+      "imageUrl": "123"
+    },
+    {
+      "id": "df785735-dcb2-46c1-80a6-63a060ceef1b",
+      "name": "zzz",
+      "imageUrl": "zzz"
+    }
+  ]
+}

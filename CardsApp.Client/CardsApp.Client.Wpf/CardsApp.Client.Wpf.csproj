@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+      <PackageReference Include="MaterialDesignThemes" Version="4.5.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+      <PackageReference Include="SimpleModal.WPF" Version="1.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Resources" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CardsApp.Client.Domain\CardsApp.Client.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="bin\Debug\net6.0-windows\appsettings.json" />
+      <None Include="obj\Debug\net6.0-windows\appsettings.json" />
+    </ItemGroup>
+
+</Project>

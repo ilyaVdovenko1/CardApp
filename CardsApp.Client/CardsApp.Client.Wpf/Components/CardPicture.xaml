@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="CardsApp.Client.Wpf.Components.CardPicture"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid>
+            <Grid.Style>
+                <Style TargetType="Grid">
+                    <Setter Property="Visibility" Value="Collapsed"></Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding HasSelectedCard}" Value="False">
+                            <Setter Property="Visibility" Value="Visible"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+            
+            <TextBlock
+                Text="Please select product"
+                FontSize="28"
+                TextWrapping="WrapWithOverflow"/>
+        </Grid>
+        <Grid>
+            <Grid.Style>
+                <Style TargetType="Grid">
+                    <Setter Property="Visibility" Value="Collapsed"></Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding HasSelectedCard}" Value="True">
+                            <Setter Property="Visibility" Value="Visible"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+            <Border BorderBrush="Gray" BorderThickness="0 1 1 1 " CornerRadius="0 0 5 5 "></Border>
+            <Image Grid.Column="0"
+                Source="{Binding PictureUrl}"
+                Height="Auto"
+                Width="Auto"
+                Stretch="None" />
+        </Grid>
+    </Grid>
+</UserControl>
